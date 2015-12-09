@@ -385,6 +385,10 @@ header .hero {
    text-align: center;
    margin-right:8px;
  }
+.bg_highlight {
+	background-color: #393939;
+        border: 1px solid white;
+}
 /* LEFT NAVBAR SETTINGS */
  .left-nav .settings {
    position:absolute;
