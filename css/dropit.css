@@ -1,22 +1,18 @@
-/*
- * Dropit v1.1.0
- * http://dev7studios.com/dropit
- *
- * Copyright 2012, Dev7studios
- * Free to use and abuse under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- */
-
-/* These styles assume you are using ul and li */
-.menu .dropit {
+ /* Hide before plugin loads */
+ul {
+	list-style: none;
+}
+.menu {
+	float: right;
+}
+.menu ul { 
     list-style: none;
-	padding: 0;
+	padding: 0 0 10 0;
 	margin: 15px 0 0;
   	float:right;
   	display:inline-block;
-}
-.menu .dropit .dropit-trigger { position: relative; }
-.menu .dropit .dropit-submenu {
+ }
+ .menu ul.dropit-submenu {
     position: absolute;
     top: 100%;
     right: 0; /* dropdown left or right */
@@ -25,34 +21,127 @@
     min-width: 100px;
     list-style: none;
 	padding: 20;
-	margin: 20px 0 0;
+}          
+.menu ul.dropit-submenu a {
+    display: block;
+    font-size: 14px;
+    line-height: 25px;
+    color: #7a868e;
+	padding: 20;
+	margin: 10px 0 0;
 }
-.menu .dropit .dropit-open .dropit-submenu { 
+.menu ul.dropit-submenu a:hover {
+    background: #248fc1;
+    color: #fff;
+    text-decoration: none;
+}
+.menu .dropit-submenu {
+    position: absolute;
+    top: 100%;
+    right: 0; /* dropdown left or right */
+    z-index: 1000;
+    display: none;
+    min-width: 100px;
+    list-style: none;
+}
+.menu .dropit-open .dropit-submenu { 
     display: block;
     background: #FFFFFF;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.30);
     border-radius: 4px;
+	margin-top: -5px;
  }
-.menu .dropit .dropit-open .dropit-submenu:after {
+ /* This is the triangle pointer pointing down */
+.menu .dropit-open .dropit-submenu:after {
   content: " ";
   position: absolute;
   border-style: solid;
-  border-width: 0 8px 8px;
-  border-color: #FFFFFF transparent;
+  border-width: 9px;
+  border-color: transparent transparent white transparent;
   display: block;
   width: 0;
   z-index: 1;
-  top: -8px;
-  right: 10px;
+  top: -18px;
+  right: 25px;
  }
- .menu .dropit .dropit-open .dropit-submenu li {
+  .menu .dropit-open .dropit-submenu li {
   display: block;
-  margin-bottom: 20px;
+  margin: 20px;
  }
- .menu .dropit .dropit-open .dropit-submenu li:last-child {
+ .menu .dropit-open .dropit-submenu li:last-child {
   margin-bottom: 0px;
  }
- .menu .dropit .dropit-open .dropit-submenu li a {
+ .menu .dropit-open .dropit-submenu li a {
+  color:#34495E;
+  text-decoration: none;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight:100;
+ }
+ /* Account button class="menu1" */
+.menu1 ul { 
+    list-style: none;
+  	float:right;
+  	display:inline-block;
+ }
+ .menu1 ul.dropit-submenu {
+    position: absolute;
+    top: 100%;
+    left: 0; /* dropdown left or right */
+    z-index: 1000;
+    min-width: 100px;
+    list-style: none;
+	
+}          
+.menu1 ul.dropit-submenu a {
+    display: block;
+    font-size: 14px;
+    line-height: 25px;
+    color: #7a868e;
+}
+.menu1 ul.dropit-submenu a:hover {
+    background: #248fc1;
+    color: #fff;
+    text-decoration: none;
+}
+.menu1 .dropit-submenu {
+    position: absolute;
+    top: 100%;
+    left: 0; /* dropdown left or right */
+    z-index: 1000;
+    display: none;
+    min-width: 100px;
+    list-style: none;
+}
+.menu1 .dropit-open .dropit-submenu { 
+    display: block;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.30);
+    border-radius: 4px;
+	margin-top: -120px;
+	margin-left: 10px;
+
+ }
+ /* This is the triangle pointer pointing down */
+.menu1 .dropit-open .dropit-submenu:after {
+  content: " ";
+  position: absolute;
+  border-style: solid;
+  border-width: 8px;
+  border-color: white transparent transparent transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: 74px;
+  right: 0px;
+ }
+  .menu1 .dropit-open .dropit-submenu li {
+  display: block;
+  padding-right: 10px;
+  
+ }
+ .menu1 .dropit-open .dropit-submenu li:last-child {
+ }
+ .menu1 .dropit-open .dropit-submenu li a {
   color:#34495E;
   text-decoration: none;
   font-family: "Lato", Helvetica, Arial, sans-serif;
